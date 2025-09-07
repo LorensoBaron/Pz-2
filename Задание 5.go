@@ -19,25 +19,15 @@ func validateUser(name string, age int, email string) error {
 }
 
 func main() {
- err := validateUser("Иван Иванов", 30, "ivan@example.com")
+ err := validateUser("Иван", 25, "ivan@example.com")
  if err != nil {
   fmt.Println("Ошибка:", err)
- }
-
- err = validateUser("", 25, "test@example.com")
- if err != nil {
-  fmt.Println("Ошибка:", err)
- }
-
- err = validateUser("Петр Петров", 15, "petr@example.com")
- if err != nil {
-  fmt.Println("Ошибка:", err)
- }
-
- err = validateUser("Сергей Сергеев", 40, "invalid-email")
- if err != nil {
-  fmt.Println("Ошибка:", err)
+ } else {
+  fmt.Println("Данные валидны")
  }
 }
+
+
+
 
 
