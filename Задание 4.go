@@ -14,7 +14,7 @@ func countVotes(candidates []string, votes []string) {
  totalVotes := len(votes)
 
  for _, vote := range votes {
-  voteCounts[vote]++ // Инкремент, даже если нет ключа (по умолчанию 0)
+  voteCounts[vote]++ 
  }
 
  fmt.Println("Результаты голосования:")
@@ -24,4 +24,5 @@ func countVotes(candidates []string, votes []string) {
   fmt.Printf("%s: %d голосов (%.2f%%)\n", candidate, count, percentage)
  }
 }
+
 
