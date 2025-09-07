@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-// 1. Объявление типа Order
 type Order struct {
  ID          int
  Items       []int
@@ -11,18 +10,13 @@ type Order struct {
  IsCompleted bool
 }
 
-// 2. Создание карты (map)
 var orders = make(map[int]Order)
 
-// 3. Функция для добавления нового заказа в карту
 func addOrder(order Order) {
  orders[order.ID] = order
 }
 
 func main() {
- // Пример использования
-
- // Создаем несколько заказов
  order1 := Order{
   ID:          1,
   Items:       []int{101, 102, 103},
@@ -39,11 +33,9 @@ func main() {
   IsCompleted: true,
  }
 
- // Добавляем заказы в карту
  addOrder(order1)
  addOrder(order2)
 
- // Выводим информацию о заказах (для проверки)
  fmt.Println("Информация о заказах:")
  for id, order := range orders {
   fmt.Printf("Заказ ID: %d\n", id)
@@ -54,3 +46,4 @@ func main() {
   fmt.Println("----------------------")
  }
 }
+
